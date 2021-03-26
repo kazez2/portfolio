@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("nai.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+}
+div h1{
+    color: yellow
+}
+div h3{
+    color: yellow;
+}
+nav{
+    background-color: violet;
+    display: flex;
+    justify-content: space-around;
+    height: 8vh;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    
+}
+
+nav h1{
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 5px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 27px;
+    cursor: pointer;
+    line-height: 8vh;
+}
+
+.nav-links a{
+    line-height: 8vh;
+    padding: 4px 8px;
+    text-decoration: none;
+    font-weight: bolder;
+    color:black;
+}
+.nav-links a:hover{
+    text-decoration: underline;
+}
+.menu-btn{
+    display: none;
+    cursor: pointer;
+}
+.menu-btn div {
+    height: 3px;
+    width: 20px;
+    background-color: black;
+    margin: 3px;
+}
+
+@media (max-width:600px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 8vh;
+        background-color: violet;
+        width: 60%;
+        height: 92vh;
+       justify-content: center;
+       text-align: center;
+       transform: translateX(100%);
+       transition: transform 3s ease-in;
+       
+    
+    }
+    .nav-links li {
+        padding: 5px 10px;
+        margin: 10px 5px;
+    }
+    .menu-btn{
+        display: block;
+        text-align: center;
+
+    }
+ }
+
+.intro {
+    text-align: center;
+}
+.intro img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.intro h3{
+    font-style: italic;
+}
+.nav-active{
+    transform: translateX(0%);
+}
+.red{
+    background-color: blueviolet;
+    font-size: 72px;
+}
+.intro h1 {
+    letter-spacing: 4px;
+    font-size: 50px;
+}
+p{
+    color: white;
+    justify-content: space-between;
+}
+li{
+    color: white;
+}
+.profile{
+    margin: 20px;
+    border-top: 3px solid blue;
+    display: grid;
+    padding: 14px 8px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+.profile img{
+    width: 100%;
+    border-radius: 50%;
+}
+.profile-info{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.profile-info p {
+    font-size: 25px;
+}
+@media (max-width: 720px){
+    .profile {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
+
+    .profile p {
+        padding: 10px;
+    }
+}
